@@ -1,0 +1,72 @@
+SCENARIO ,TEST STEPS,EXPECTED RESULT
+Successful Login and Place an order using Delivery Option,"1.Login on the website with registered email address and password
+2.Add items to the shopping cart.      
+3.Select Delivery option.
+4.Continue to checkout. 
+5.Enter your Delivery Address.
+6.Under Payment method select Credit card.
+7. Enter a valid credit card number, expiration date, and CVV code.
+8. Click Place Order.","1. Should be able to login successfully
+2.The order is successfully placed, and a confirmation email is sent to the customer.
+3.The credit card is charged for the order amount."
+,,
+,,
+Successful Login and Place an order using Pick Up Option,"1.Login on the website with registered email address and password 
+2.Add items to the shopping cart. 
+3.Select Free Pick up in store option.
+4.Click on Select Store.
+5. Enter postcode.
+6. All the stores near by entered postcode will get displayed.
+7. Select any store.
+5..Continue to checkout. 
+5.Enter your Billing details. 
+6.Under Payment method select Credit card. 
+7. Enter a valid credit card number, expiration date, and CVV code. 
+8. Click Place Order.","1. Should be able to login successfully 
+2.The order is successfully placed, and a confirmation email is sent to the customer. 
+3.The credit card is charged for the order amount."
+,,
+,,
+,,
+Unsuccessful Login,"1. Enter an invalid email address or password.
+2. Try to login.","An error message is displayed "" The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."""
+,,
+,,
+Cart is empty ,"1. Login on the website with correct credentials.
+2. Add  one item to the cart.
+3.Proceed to checkout.
+4.Remove the item from the Cart at checkout page","1. Checkout Button should not be visible now
+2. the following message should be displayed: ""You currently have no items in your shopping cart.  Please Continue Shopping."""
+,,
+,,
+Credit Card Information is missing,"1. Enter Valid email address and password.
+2.Successfuly able to login.
+3.Add items to Shopping Cart.
+4.Proceed to Checkout.
+5..Enter your Delivery Address.
+6.Under Payment method select Credit card.
+7. Click on Place order without entering credit card detais.","Not able to place order. And all the credit card details boxes should come in Red colour.
+
+"
+,,
+,,
+Invalid Credit Card Information,"1.Login to a customer account or proceed as a guest.
+2.Select credit card as the payment method.
+3.Enter an invalid credit card number (4111 1111 1111 11) 
+4. Fill in all other fields with correct value
+5. Click Place Order Button","Error should be displayed ""Please enter a valid credit card number."""
+Mandatory information is not filled,"1.Login to a customer account or proceed as a guest. 
+2.Add items to the shopping cart. 
+3.Select Pick Up or Delivery option. 
+4.Continue to checkout. 
+5.Enter your Delivery Address.
+6.Under Payment method select Credit card.
+7.Enter Credit Card Number
+8. Leave the CVV , expiry date or Name on card as empty.",Error should be displayed against that respective text box.
+Type of credit card entered,"1.Login to a customer account or proceed as a guest. 
+2.Add items to the shopping cart.      
+3.Select Pick Up or Delivery option.
+4.Continue to checkout. 
+5.Enter your Delivery Address.
+6.Under Payment method select Credit card.
+7.Enter Credit Card Number","Correct type of credit card should be highlighted (Mastercard, Visa or Amex)"
